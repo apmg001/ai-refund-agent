@@ -1,0 +1,26 @@
+{
+  "version": "2026.1",
+  "currency": "USD",
+  "windows": {
+    "standard_return_window_days": 30,
+    "extended_return_window_days": 90
+  },
+  "thresholds": {
+    "high_value_manual_review_amount": 500.0
+  },
+  "fees": {
+    "restocking_fee_rate": 0.15,
+    "restocking_fee_categories": ["ELECTRONICS"]
+  },
+  "categories": {
+    "non_refundable": ["DIGITAL", "GIFT_CARD"],
+    "hygiene_restricted": ["BEAUTY", "GROCERY"]
+  },
+  "order": {
+    "refundable_statuses": ["DELIVERED", "PARTIALLY_REFUNDED"]
+  },
+  "reasons": {
+    "seller_fault": ["DEFECTIVE", "DAMAGED", "WRONG_ITEM", "NOT_AS_DESCRIBED", "ARRIVED_LATE"]
+  },
+  "notes": "seller_fault reasons grant the extended return window, waive restocking fees, and override final-sale / hygiene restrictions. Non-refundable categories and high-value manual review are never overridden."
+}

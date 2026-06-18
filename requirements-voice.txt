@@ -1,0 +1,12 @@
+# Optional voice pipeline (bonus) — fully open-source, runs locally, no external API.
+# Install with:  pip install -r requirements-voice.txt
+#
+# faster-whisper provides local speech-to-text (Whisper via CTranslate2).
+# pyttsx3 provides offline text-to-speech using the platform's native engine.
+# sounddevice / soundfile are used to capture and write audio from the microphone.
+
+faster-whisper>=1.0,<2.0
+pyttsx3>=2.90,<3.0
+sounddevice>=0.4,<1.0
+soundfile>=0.12,<1.0
+numpy>=1.26,<3.0

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refund-agent"
+version = "1.0.0"
+description = "An AI customer-support agent that processes or denies e-commerce refunds using a deterministic policy engine and a pluggable open-source LLM."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ShopSphere Engineering" }]
+keywords = ["ai-agent", "refunds", "function-calling", "ollama", "customer-support"]
+
+dependencies = [
+    "pydantic>=2.6,<3.0",
+    "pydantic-settings>=2.2,<3.0",
+    "httpx>=0.27,<1.0",
+    "rich>=13.7,<14.0",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110,<1.0", "uvicorn[standard]>=0.29,<1.0"]
+voice = [
+    "faster-whisper>=1.0,<2.0",
+    "pyttsx3>=2.90,<3.0",
+    "sounddevice>=0.4,<1.0",
+    "soundfile>=0.12,<1.0",
+    "numpy>=1.26,<3.0",
+]
+dev = ["pytest>=8.0,<9.0"]
+
+[project.scripts]
+refund-agent = "refund_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

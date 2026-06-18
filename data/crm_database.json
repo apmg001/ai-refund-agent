@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0",
+  "description": "Mock CRM. Order dates are expressed as relative offsets (days ago) so the demo behaves deterministically regardless of the date it is run.",
+  "customers": [
+    {
+      "customer_id": "CUST-001",
+      "name": "Alice Morgan",
+      "email": "alice.morgan@example.com",
+      "tier": "PREMIUM",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 1,
+      "orders": [
+        {
+          "order_id": "ORD-10001",
+          "product_name": "Aurora Wireless Headphones",
+          "category": "ELECTRONICS",
+          "amount": 129.99,
+          "status": "DELIVERED",
+          "placed_days_ago": 12,
+          "delivered_days_ago": 8,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-002",
+      "name": "Bob Chen",
+      "email": "bob.chen@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 0,
+      "orders": [
+        {
+          "order_id": "ORD-10002",
+          "product_name": "TrailRunner Running Shoes",
+          "category": "APPAREL",
+          "amount": 89.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 50,
+          "delivered_days_ago": 45,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-003",
+      "name": "Carol Diaz",
+      "email": "carol.diaz@example.com",
+      "tier": "VIP",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 2,
+      "orders": [
+        {
+          "order_id": "ORD-10003",
+          "product_name": "Pulse Smart Watch",
+          "category": "ELECTRONICS",
+          "amount": 499.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 9,
+          "delivered_days_ago": 5,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-004",
+      "name": "David Okafor",
+      "email": "david.okafor@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 0,
+      "orders": [
+        {
+          "order_id": "ORD-10004",
+          "product_name": "Galaxy Quest Game Code",
+          "category": "DIGITAL",
+          "amount": 59.99,
+          "status": "DELIVERED",
+          "placed_days_ago": 3,
+          "delivered_days_ago": 2,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-005",
+      "name": "Eve Sullivan",
+      "email": "eve.sullivan@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": true,
+      "lifetime_refunds": 9,
+      "orders": [
+        {
+          "order_id": "ORD-10005",
+          "product_name": "Milano Designer Handbag",
+          "category": "APPAREL",
+          "amount": 850.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 6,
+          "delivered_days_ago": 3,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-006",
+      "name": "Frank Rivera",
+      "email": "frank.rivera@example.com",
+      "tier": "PREMIUM",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 1,
+      "orders": [
+        {
+          "order_id": "ORD-10006",
+          "product_name": "BrewMaster Coffee Maker",
+          "category": "HOME",
+          "amount": 75.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 64,
+          "delivered_days_ago": 60,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-007",
+      "name": "Grace Park",
+      "email": "grace.park@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 0,
+      "orders": [
+        {
+          "order_id": "ORD-10007",
+          "product_name": "Summer Clearance T-Shirt",
+          "category": "APPAREL",
+          "amount": 15.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 8,
+          "delivered_days_ago": 5,
+          "is_final_sale": true,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-008",
+      "name": "Henry Webb",
+      "email": "henry.webb@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 0,
+      "orders": [
+        {
+          "order_id": "ORD-10008",
+          "product_name": "ShopSphere Gift Card",
+          "category": "GIFT_CARD",
+          "amount": 100.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 2,
+          "delivered_days_ago": 1,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-009",
+      "name": "Ivy Nakamura",
+      "email": "ivy.nakamura@example.com",
+      "tier": "VIP",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 3,
+      "orders": [
+        {
+          "order_id": "ORD-10009",
+          "product_name": "ProBook Ultra Laptop",
+          "category": "ELECTRONICS",
+          "amount": 1500.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 14,
+          "delivered_days_ago": 10,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-010",
+      "name": "Jack Thompson",
+      "email": "jack.thompson@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 0,
+      "orders": [
+        {
+          "order_id": "ORD-10010",
+          "product_name": "VitaBlend Blender",
+          "category": "HOME",
+          "amount": 45.0,
+          "status": "SHIPPED",
+          "placed_days_ago": 2,
+          "delivered_days_ago": null,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-011",
+      "name": "Karen Lopez",
+      "email": "karen.lopez@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 2,
+      "orders": [
+        {
+          "order_id": "ORD-10011",
+          "product_name": "EchoBuds Earphones",
+          "category": "ELECTRONICS",
+          "amount": 60.0,
+          "status": "REFUNDED",
+          "placed_days_ago": 20,
+          "delivered_days_ago": 16,
+          "is_final_sale": false,
+          "amount_already_refunded": 60.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-012",
+      "name": "Leo Fischer",
+      "email": "leo.fischer@example.com",
+      "tier": "PREMIUM",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 1,
+      "orders": [
+        {
+          "order_id": "ORD-10012",
+          "product_name": "Highland Wool Jacket",
+          "category": "APPAREL",
+          "amount": 120.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 16,
+          "delivered_days_ago": 12,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-013",
+      "name": "Mia Rossi",
+      "email": "mia.rossi@example.com",
+      "tier": "STANDARD",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 1,
+      "orders": [
+        {
+          "order_id": "ORD-10013",
+          "product_name": "Bloom Eau de Parfum",
+          "category": "BEAUTY",
+          "amount": 40.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 9,
+          "delivered_days_ago": 6,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-014",
+      "name": "Noah Bauer",
+      "email": "noah.bauer@example.com",
+      "tier": "STANDARD",
+      "account_status": "SUSPENDED",
+      "fraud_flag": false,
+      "lifetime_refunds": 4,
+      "orders": [
+        {
+          "order_id": "ORD-10014",
+          "product_name": "ClearView 27\" Monitor",
+          "category": "ELECTRONICS",
+          "amount": 200.0,
+          "status": "DELIVERED",
+          "placed_days_ago": 7,
+          "delivered_days_ago": 4,
+          "is_final_sale": false,
+          "amount_already_refunded": 0.0
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST-015",
+      "name": "Olivia Grant",
+      "email": "olivia.grant@example.com",
+      "tier": "VIP",
+      "account_status": "ACTIVE",
+      "fraud_flag": false,
+      "lifetime_refunds": 2,
+      "orders": [
+        {
+          "order_id": "ORD-10015",
+          "product_name": "ChefPro Cookware Set",
+          "category": "HOME",
+          "amount": 300.0,
+          "status": "PARTIALLY_REFUNDED",
+          "placed_days_ago": 25,
+          "delivered_days_ago": 20,
+          "is_final_sale": false,
+          "amount_already_refunded": 50.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Optional HTTP API (bonus) — FastAPI server exposing /chat and admin endpoints.
+# Install with:  pip install -r requirements-api.txt
+
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.29,<1.0

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopSphere · Refund Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- ================= Top bar ================= -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">ShopSphere</span>
+      <span class="brand__sub">Refund Desk</span>
+    </div>
+    <div class="status" id="status">
+      <span class="pill pill--muted" id="providerPill" title="Active language model">
+        <span class="pill__dot"></span><span id="providerLabel">connecting…</span>
+      </span>
+      <span class="pill pill--session" id="sessionPill" title="Conversation id">
+        <span id="sessionLabel">—</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- ================= Main split ================= -->
+  <main class="layout">
+    <!-- ---- Customer chat ---- -->
+    <section class="chat" aria-label="Customer chat">
+      <div class="chat__head">
+        <h2 class="panel-title">Chat</h2>
+        <p class="panel-note">Talk to the agent like a customer.</p>
+      </div>
+
+      <div class="chat__log" id="chatLog" aria-live="polite">
+        <div class="empty" id="chatEmpty">
+          <p class="empty__title">Start a refund request</p>
+          <p class="empty__body">
+            Give an order ID and a reason — e.g. “Refund <strong>ORD-10001</strong>,
+            it arrived defective.” Try a sample order below.
+          </p>
+          <div class="chips" id="chips"></div>
+        </div>
+      </div>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <button
+          type="button"
+          class="composer__mic"
+          id="micBtn"
+          title="Speak your message"
+          aria-label="Speak your message"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z" fill="currentColor"/>
+            <path d="M19 11a7 7 0 0 1-14 0M12 18v3" stroke="currentColor" stroke-width="2"
+              fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <textarea
+          id="input"
+          class="composer__input"
+          rows="1"
+          placeholder="Ask about a refund…"
+          aria-label="Message"
+        ></textarea>
+        <button type="submit" class="composer__send" id="sendBtn">Send</button>
+      </form>
+    </section>
+
+    <!-- ---- Reasoning console (the glass box) ---- -->
+    <section class="console" aria-label="Agent reasoning">
+      <div class="console__head">
+        <div>
+          <h2 class="panel-title panel-title--light">Live reasoning</h2>
+          <p class="panel-note panel-note--light">
+            Every step the agent takes, as it happens.
+          </p>
+        </div>
+        <span class="conn" id="conn" title="Reasoning feed status">
+          <span class="conn__dot"></span><span id="connLabel">connecting</span>
+        </span>
+      </div>
+
+      <ol class="trace" id="trace">
+        <li class="trace-empty" id="traceEmpty">
+          The agent’s reasoning — tool calls, policy decisions, guardrail checks —
+          will stream here as it works.
+        </li>
+      </ol>
+
+      <footer class="console__foot">
+        <span class="legend"><i class="sw sw--tool"></i>tool call</span>
+        <span class="legend"><i class="sw sw--result"></i>result</span>
+        <span class="legend"><i class="sw sw--decision"></i>decision</span>
+        <span class="legend"><i class="sw sw--guardrail"></i>guardrail</span>
+        <span class="legend"><i class="sw sw--error"></i>error</span>
+      </footer>
+    </section>
+  </main>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
